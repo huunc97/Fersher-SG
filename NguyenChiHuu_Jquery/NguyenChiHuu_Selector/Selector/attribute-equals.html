@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <title>attributeEquals demo</title>
+   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+   <div>
+      <input name="myName" value="Huu">
+      <span>value?</span>
+   </div>
+   <div>
+      <input name="myName" value="Nguyen">
+      <span>value?</span>
+   </div>
+   <div>
+      <input name="myName" value="Chi">
+      <span>value?</span>
+   </div>
+
+   <script>
+      $("input[value='Huu']").next().text("My name !");
+   </script>
+
+</body>
+
+</html>

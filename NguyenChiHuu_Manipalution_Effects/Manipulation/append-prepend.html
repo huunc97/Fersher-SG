@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>append prepend demo</title>
+    <style>
+        p {
+            background: yellow;
+        }
+
+        button {
+            height: 70px;
+            width: 70px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+
+    <p> - HAHAHAHAHA - </p>
+    <button id="prepend">prepend</button>
+    <button id="append">append</button>
+    <script>
+        $("#prepend").click(function () {
+            $("p").prepend("<strong>Hello</strong>");
+        });
+        $("#append").click(function () {
+            $("p").append("<strong>Hello</strong>");
+        });
+    </script>
+
+</body>
+
+</html>

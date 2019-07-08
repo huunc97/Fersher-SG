@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>menu toggle</title>
+	<style type="text/css" media="screen">
+		#menu ul{
+			overflow: hidden;
+
+		}
+		ul li{
+			list-style: none;
+
+		}
+		#menu > ul > li > a{
+			padding: 3px 10px;
+			background-color: yellow !important;
+		}
+		ul li ul{
+			padding: 0;
+			display: none;
+
+		}
+		#menu ul li a{
+			display: block;
+			background-color: red ;
+			border: 1px solid black;
+		}
+
+		.active{
+			display: block;
+		}
+	</style>
+</head>
+<body>	
+	<div id="menu">
+		<ul>
+			<li>
+				<a href="#html">HTML</a>
+				<ul>
+					<li><a href="#html1">html1</a></li>
+					<li><a href="#html2">html2</a></li>
+					<li><a href="#html3">html3</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#js">JS</a>
+				<ul>
+					<li><a href="#js1">js1</a></li>
+					<li><a href="#js2">js2</a></li>
+					<li><a href="#js3">js3</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#css">CSS</a>
+				<ul>
+					<li><a href="#css1">css1</a></li>
+					<li><a href="#css2">css2</a></li>
+					<li><a href="#css3">css3</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script>
+
+	$(document).ready(function(){
+
+		$('#menu > ul > li > a').click(function(){
+
+			var $ul = $(this).next();
+			// if($ul.is(':hidden')){	
+			// $ul.slideUp(500);}
+			// else{
+			// 	$ul.slideDown(500);
+			// }
+			// if ($ul.is(':visible'))
+			// {
+			// 	$ul.slideToggle();
+			// }
+			// else 
+			// {
+			// 	var $visible = $('#menu ul li ul :visible');
+			// 	$visible.slideToggle();
+			// 	$ul.slideToggle('active');
+			// }
+			
+			// $('#menu ul li ul').removeClass('active');
+			// $ul.slideToggle();
+			// $ul.toggleClass('active');
+			// $ul.addClass('active');
+			// return false;
+		});
+	});
+</script>
+</html>

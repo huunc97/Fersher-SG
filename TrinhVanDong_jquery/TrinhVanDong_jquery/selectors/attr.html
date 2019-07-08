@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/jquery.min.js"></script>
+</head>
+<body>
+	<input type="textbox" id="inputid" value="Giá trị input"/> Ăn <br/>
+
+	<input type="button" id="view1" value="Xóa Type"/>
+	<input type="button" id="view2" value="Thêm vào thuộc tính type = radio"/>
+
+	<script language="javascript">
+
+          // Bắt đầu code jquery
+          $(document).ready(function(){
+
+              // Xóa thuộc tính type khi click vào button 1
+              $('#view1').click(function(){
+              	$('#inputid').removeAttr('value');
+              });
+
+
+              // Thêm vào thuộc tính type = radio
+              $('#view2').click(function(){
+              	$('#inputid').attr('type', 'radio');
+              });
+
+          });
+          
+      </script>
+  </body>
+  </html>

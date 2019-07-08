@@ -1,0 +1,158 @@
+.navbar-brand img{
+    width: 70px; 
+}
+
+.nav-link:hover{
+
+    border-top-style:solid;
+    border-top-color: darkorange;
+    border-bottom-style:solid;
+    border-bottom-color: darkorange;
+}
+
+.carousel-indicators  li {
+    background:none;
+    border: 2px #ffffff solid;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+  }
+.background{
+    background-color: rgb(247, 238, 244)  
+}
+.content{
+    overflow :hidden;
+    
+}
+
+.content h2{
+    padding-top: 35px;
+    color: darkorange;
+}
+.content p{
+    padding-top: 20px;
+    font-size: 13px;
+    text-align: center;
+}
+.content h3{
+    text-align: center;
+    padding-top: 20px;
+}
+.step{
+    width: 255px;
+    margin: 10px;
+    padding-top: 50px;
+    float:left;
+    text-align: center;
+}
+
+.step h5{
+    padding-top: 30px;   
+}
+.step p{
+    padding-top: 2px;
+}
+
+.background-smg{
+    background-color: gainsboro
+}
+.smg{
+   overflow: hidden; 
+   position: relative;
+}
+
+.smg h2{
+    padding-top: 35px;
+    color: darkorange;  
+}
+.smg-load{
+    width:535px;
+    padding-top: 20px;
+    margin: 10px;
+    float: left;
+  
+}
+.smg-img{
+    float: left;
+    width: 70px;
+}
+
+.smg-text{
+    float: left;
+    width: 455px;
+}
+
+.imbg{
+    position: absolute;
+    top:200px;
+    right: 100px;
+    opacity: 0.3;
+    width: 300px;
+    height: 300px;
+}
+.clean{ clear: both}
+.hr{
+    border: 5px;
+    border-bottom-style: dotted;
+    border-color: darkgrey;   
+}
+.smg-bottom h2{
+    padding-top: 15px;
+    color: darkorange;
+    text-align: center;
+}
+.smg-bt-text h5{
+    color: darkorange;
+    text-align: center;
+}
+.smg-bt-text{
+    float: left;
+    width:350px ;
+    padding-left: 70px;
+    text-align: center;
+}
+
+.backgroud-th{
+    background-color: #eeede7;
+    height:150px ;
+}
+
+.trademark h2{
+    color: darkorange;
+    padding-top: 55px;
+}
+
+.backgroud-cs{
+    background-color: rgb(247, 238, 244) 
+}
+
+.customer{
+    overflow: hidden;
+}
+
+.cs-format{
+    float: left;
+    width: 500px;
+}
+.cs-text{
+    float:left;
+    width: 750px;
+    margin: 35px;
+}
+.cs-img{
+    float: right;
+    width: 200px;
+    padding-top: 35px;
+}
+.hrr{
+    border: 2px;
+    border-style: solid;
+    border-color: darkgrey;   
+}
+
+
+    
+
+
+
+

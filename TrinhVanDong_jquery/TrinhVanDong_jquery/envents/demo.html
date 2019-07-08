@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/jquery.min.js"></script>
+</head>
+<body>
+	<p>First Paragraph</p>
+	<p>Second Paragraph</p>
+	<p>Yet one more Paragraph</p>
+
+	<select id = "demo_select" name="">
+		<option value="option1">option1</option>
+		<option value="option2">option2</option>
+		<option value="option3">option3</option>
+	</select>
+
+	<form>
+		<input type="text" id = ""><br>
+		<input type="submit" name="" value="OK">
+	</form>
+
+	<div id='selected'>
+		
+	</div>
+	<span id = 'span'></span>
+	keypress : <span></span><br>
+	keyup : <span></span><br>
+	keydown : <span></span><br>
+	<span></span>
+	<script>
+		$(document).ready(function() {
+			$( "p" ).click(function() {
+				$( this ).slideUp();
+			});
+
+			function changeEvent() {
+				$("#demo_select").change(function() {
+					var content = $(':selected').val();
+					$('#selected').text(content);
+				});
+			}
+
+			function blurEvent() {
+				$("input:text").blur(function(){
+					alert("bạn đang rời khỏi tôi");
+				});
+			}
+
+			function submitEvent() {
+				$( "form" ).submit(function( event ) {
+					if ( $( "input:first" ).val() === "ok" ) {
+						$( "span" ).text( "Validated..." ).show();
+						return;
+					}
+
+					$( "#span" ).text( "Not valid!" ).show().fadeOut( 1000 );
+					event.preventDefault();
+				});
+			}
+
+			function keyEvent() {
+				var i = 0;
+				$("input").keypress(function() {
+					
+					$('span:eq(1)').text(i += 1);
+				});
+				// $("input").keyup(function() {
+				// 	var i = 0;
+				// 	$("span:eq(2)").text($i += 1);
+				// });
+				// $("input").keydown(function() {
+				// 	$("#span:eq(3)").text(i += 1);
+				// });
+			}
+
+			changeEvent();
+			blurEvent();
+			submitEvent();
+			keyEvent();
+		});
+	</script>
+</body>
+</html>

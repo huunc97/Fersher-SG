@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>class demo</title>
+  <style>
+    div {
+      width: 120px;
+      height: 90px;
+      float: left;
+      padding: 5px;
+      margin: 5px;
+      background-color: #eee;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+
+  <div class="div-left">
+    <p>class="div-left"</p>
+  </div>
+  <div class="div-right">
+    <p>class="div-right"</p>
+  </div>
+  <div class="div-right">
+    <p>class="div-right"</p>
+  </div>
+
+  <script>
+    $(".div-left").css("border", "3px solid red");
+    $(".div-right").css("border", "3px solid blue");
+ 
+  </script>
+
+</body>
+
+</html>

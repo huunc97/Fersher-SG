@@ -1,0 +1,67 @@
+﻿<html>
+
+<head>
+    <title>Event demo</title>
+    <style>
+        form{
+            width: 172px;
+            height: 200px;
+            border: 1px solid;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+    <form>
+        <input id="username" type="text" value="" placeholder="Username"><br><br>
+        <input id="password" type="text" value="" placeholder="Password"><br><br>
+        <input type="radio" name="gender" value="nam" checked> Nam
+        <hr>
+        <input type="radio" name="gender" value="nu"> Nữ <br>
+        <input type="submit">
+        <p>Keypress:<span>0</span></p>
+    </form>
+    <script>
+        $("#username").blur(function () {
+            var value = $(this).val();
+            if (value == "") {
+                alert("Vui lòng nhập username");
+            }
+        });
+        $("#password").blur(function () {
+            var value = $(this).val();
+            if (value == "") {
+                alert("Vui lòng nhập password");
+            }
+        });
+
+        $("input").keydown(function () {
+            $("input").css("background-color", "yellow");
+        });
+        $("input").keyup(function () {
+            $("input").css("background-color", "pink");
+        });
+        i = 0;
+        $("input").keypress(function () {
+            $("span").text(i += 1);
+        });
+
+        $(function () {
+            $("input[name='gender']").change(function () {
+                alert("Sự kiện change() vừa mới xảy ra");
+            })
+        });
+
+        $("form").submit(function () {
+            if ($("#username" && "#password").val() != "") {
+                alert("Successful!");
+                return;
+            }
+            alert("Unsuccessful!");
+
+        });
+    </script>
+</body>
+
+</html>

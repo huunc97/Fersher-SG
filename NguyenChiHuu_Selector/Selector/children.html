@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Children demo</title>
+    <style>
+        .format * {
+            display:block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+</head>
+
+<body class="format">
+    <div style="width:500px;">
+        <ul> parent of parent
+            <li>parent
+                <span>Children</span>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+
+        $("li").children().css({
+            "color": "red",
+            "border": "2px solid red"
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/jquery.min.js"></script>
+	<script src="/javascripts/application.js" type="text/javascript" charset="utf-8" async defer></script>
+	<style>
+		div {
+			background: yellow;
+			border: 1px solid #AAA;
+			width: 80px;
+			height: 80px;
+			margin: 0 5px;
+			float: left;
+		}
+		div.colored {
+			background: green;
+		}
+	</style>
+</head>
+<body>
+	<button id="run">Run</button>
+
+	<div></div>
+	<div id="mover"></div>
+	<div id="over"></div>
+	<div id="milk man"></div>
+	<div>selectors</div>
+	<div></div>
+
+	<script>
+		
+
+		$(document).ready(function(){
+			animateIt();
+			selectors();
+			attributes();
+		});
+
+		$( "#run" ).click(function() {
+			$( "div:animated" ).toggleClass( "colored" );
+		});
+
+
+		function animateIt() {
+			$( "#mover" ).slideToggle( "slow", animateIt );
+		}
+
+		function selectors(){
+			$('*').css('color','red');
+			$('div:last').addClass('attribute');
+			$('.attribute').text('attribute');
+			$('#mover').text('animate').css('color','pink');
+
+		}
+		function attributes(){
+			//chọn id là  mover
+			$("div[id='mover']").css('background','red');
+			//chọn tất cả id có từ là "ove"
+			$("div[id*='ove']").css('border','5px solid black');
+			//chọn tất cả id có chuổi bắt đầu là "ove"
+			$("div[id^='ove']").css('border','5px solid green');
+			//chọn tất cả id có chuổi kết thúc là "ver"
+			$("div[id$='ver']").css('border','5px solid gray');
+			//chọn tất cả id sau khoảng trắng
+			$("div[id~='man']").css('border','5px solid pink');
+			//chọn tất cả id có chuổi bắt đầu giống nhau
+			$("div[id|='man']").css('border','5px solid pink');
+		}
+
+		
+
+	</script>
+</body>
+</html>

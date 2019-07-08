@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/jquery.min.js"></script>
+</head>
+<body>
+	<ul class="topnav">
+		<li>Item 1</li>
+		<li>Item 2
+			<ul>
+				<li>Nested item 1</li>
+				<li>Nested item 2</li>
+				<li>Nested item 3</li>
+			</ul>
+		</li>
+		<li>Item 3</li>
+	</ul>
+	<div id="demo"></div>
+</body>
+	<script>
+		$(document).ready(function() {
+			function demoChildren() {
+				//lấy thành phẩn là con của thẻ ul
+				$( "ul" ).children().css( "border", "3px double red" );
+			}	
+			function demoParent() {
+				//lấy thành phần là cha của li
+				$( "li" ).parent().css( "border", "3px double red" );
+			}
+			function demoNextPrev() {
+				//lấy thẻ tiếp theo 
+				
+				// $("li").next().css( "border", "3px double red" );
+
+				$("li").prev().css( "border", "3px double red" );
+
+			}
+			function demoFirstLast() {
+				//lấy thẻ li đầu tiên
+				$("li").first().css( "border", "3px double red" );
+			}
+
+			
+			// demoParent();
+			// demoChildren();
+			// demoNextPrev();
+			demoFirstLast();
+		});
+	</script>
+</html>

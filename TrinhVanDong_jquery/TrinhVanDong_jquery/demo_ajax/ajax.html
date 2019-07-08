@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo ajax</title>
+	<script src="js/jquery.min.js"></script>        
+	<!-- <script language="javascript" src="http://code.jquery.com/jquery-2.0.0.min.js"></script> -->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js" type="text/javascript"></script>
+
+	<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+
+
+
+</head>
+<body>
+	<form action="" method="POST" accept-charset="utf-8" id="form_input">
+		<label>Nhập số a</label><input type="text" name="a" id="a" value="" name="a"><br>
+		<label>Nhập số b</label><input type="text" name="b" id="b" value="" name="b">
+		<input type="button" value="click">
+
+	</form>
+	<p id="demo"></p>
+
+</body>
+<script>
+	$(document).ready(function() {
+		
+		$('input:button').click(function() {
+
+			// var data = $('form#form_input').serialize();
+			// console.log(data);
+			$.ajax({
+				url : 'demo.php',
+				type : 'post',
+				data : {
+					a : parseInt($('#b').val()),
+					b : parseInt($('#b').val())
+				},
+				success : function (data){
+					$('#demo').html(data);
+				}
+			});
+		});
+	});
+</script>
+</html>

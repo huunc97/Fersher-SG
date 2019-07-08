@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>width height demo</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <style>
+        div {
+            height: 100px;
+            width: 150px;
+            background-color: cornflowerblue
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+    </div>
+    <p class="width"></p>
+    <p class="height"></p>
+    <script>
+        $(function () {
+            $('.width').text('chiều rộng của thành phần div : ' + $('div').width() + 'px');
+            $('p.height').text('chiều cao của thành phần div : ' + $('div').height() + 'px');
+        });
+    </script>
+
+</body>
+
+</html>

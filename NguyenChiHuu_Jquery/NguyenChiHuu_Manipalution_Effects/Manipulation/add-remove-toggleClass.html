@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>add remove toggleClass demo</title>
+    <style>
+        button {
+            margin-top: 20px;
+            height: 50px;
+            width: 100px;
+            ;
+        }
+
+        .blue {
+            color: blue;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+    <div>
+        <p> - HAHAHAHAHA - </p>
+        <p> - HIHIHIHIHI -</p>
+    </div>
+    <button id="add">addClass</button>
+    <button id="remove">removeClass</button>
+    <button id="toggle">toggleClass</button>
+    <script>
+        $("#add").click(function () {
+            $("p").addClass("blue");
+        });
+        $("#remove").click(function () {
+            $("p").removeClass("blue");
+        });
+        $("#toggle").click(function () {
+            $("p").toggleClass("blue");
+        });
+    </script>
+
+</body>
+
+</html>

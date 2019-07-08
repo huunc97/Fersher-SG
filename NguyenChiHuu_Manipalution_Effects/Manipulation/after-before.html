@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>after before demo</title>
+    <style>
+        p {
+            background: yellow;
+        }
+
+        button {
+            margin-top: 20px;
+            height: 70px;
+            width: 70px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+    <div>
+        <p> - HAHAHAHAHA - </p>
+    </div>
+    <button id="before">before</button>
+    <button id="after">after</button>
+    <script>
+        $("#before").click(function () {
+            $("p").before("<strong>Hello</strong>");
+        });
+        $("#after").click(function () {
+            $("p").after("<strong>Hello</strong>");
+        });
+    </script>
+
+</body>
+
+</html>

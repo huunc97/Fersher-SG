@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Effects demo</title>
+  <style>
+    .text {
+      position: relative;
+      background: #def3ca;
+      margin: 3px;
+      width: 80px;
+      display: none;
+      text-align: center;
+    }
+
+    #hide {
+      display: none;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+
+  <div class="text">
+    <div>Nguyen</div>
+    <div>Chi</div>
+    <div>Huu</div>
+    <div> !! </div>
+  </div>
+  <div class="btn">
+    <button id="show">Show</button>
+    <button id="hide">Hide</button>
+    <button id="toggle">Toggle</button>
+    <button id="animate-1">Animate 1</button>
+    <button id="animate-2">Animate 2</button>
+  </div>
+  <script>
+    $("#show").click(function () {
+      $(".text").slideDown(1000);
+      $("#hide").show(1001);
+    });
+    $("#hide").click(function () {
+      $(".text").slideUp(1000);
+    });
+    $("#toggle").click(function () {
+      $(".text").slideToggle(1000);
+    });
+    $("#animate-1").click(function () {
+      $(".text").animate({
+        width: "50%",
+        fontSize: "3em",
+        borderWidth: "10px"
+      });
+    });
+    $("#animate-2").click(function () {
+      $(".text").animate({
+        "right": "-=50px"
+      }, "slow");
+    });
+  </script>
+
+</body>
+
+</html>

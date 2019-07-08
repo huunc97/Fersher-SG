@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/jquery.min.js"></script>
+	<style type="text/css" media="screen">
+		div.visible{
+			display: block;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div hidden="hidden">
+		noi dung
+	</div>
+	
+	<form action="">
+		username: <input type="text" name="user"><br>
+		password: <input type="password" name="password"><br>
+		giới tính : <br> nam <input type="checkbox" name="" value="nam"> nữ :<input type="checkbox" name="" value="nữ"> <br>
+		<button type="button"> Button</button>
+		<input type="button" value="Another useless button"><br>
+		<input type="reset" value="Reset">
+		<input type="submit" value="Submit"><br>
+		<input type="text" value="Text"/> <br/>
+		<input type="file" value="file"/> <br/>
+		<input type="password" value="Pasword"/> <br/>
+		<select name="">
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+
+		</select><br>
+
+	</form>
+</body>
+<script>
+	$(document).ready(function(){
+		var hidden = $('div:hidden').addClass('visible');
+		var button = $(":button").css("background-color", "red");
+		var $checkbox = $(":checkbox");
+		$( "input:checkbox" ).on( "click", function() {
+			alert( $( "input:checked" ).val() );
+		});
+		var reset = $(":reset").css("background-color","yellow");
+		var submit = $(":submit").css("background-color","black").css("color","yellow");
+		// console.log($(":checkbox"));
+		$(':text').css('border', 'solid 2px red');
+		$(':password').css('border', 'solid 2px blue');
+		$(':file').css('border', 'solid 2px pink');
+		$(':selected').parent().css('border', 'solid 2px green');
+		$('select').change(function() {
+			var selected = $(':selected').val();
+			alert(selected);
+		});
+	});
+</script>
+</html>

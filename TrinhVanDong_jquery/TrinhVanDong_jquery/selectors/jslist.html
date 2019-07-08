@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul id='menu'>
+	</ul>
+	<div></div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script>
+
+	$(document).ready(function() {
+
+		var todoList = [
+		'sadsadsa',
+		'sdfzxczxcxzc',
+		'qưertertyu'
+		];	
+
+		
+		// for(var i=0;i<todoList.length;i++){
+		// 	$('#menu').wrapInner("<li>"+todoList[i]+"</li>");
+		// }
+		// console.log(todoList);
+		
+		var htmlList = $('#menu');
+		var content = todoList.map(function(item) {
+			return '<li>' + item + '</li>';
+		});
+
+		htmlList.html(content);
+
+	});
+</script>
+</html>

@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+    <input type="number" placeholder="Number 1" id="namea">
+    <input type="number" placeholder="Number 2" id="nameb">
+
+    <input type="button" value="Tính Toán" id="submit">
+    <div id="display"></div>
+    <script>
+        $(function () {
+            $("#submit").click(function () {
+                var na = $("#namea").val();
+                var nb = $("#nameb").val();
+                var form_data = {
+                    "number1": na,
+                    "number2": nb
+                };
+
+                if (na == '' || nb == '')
+                    alert("Vui lòng không được bỏ trống!");
+                else if (nb == '0')
+                {
+                    alert("Number 2 phải khác 0 !");
+                    $("#nameb").focus();
+                }
+                else {
+                    $.ajax({
+                        url: 'sever.php',
+                        data: form_data,
+                        type: "POST",
+                        success: function (data) {
+                            $("#display").html(data);
+                        }
+                    });
+                }
+            });
+
+
+        });
+    </script>
+</body>
+
+</html>

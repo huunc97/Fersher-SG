@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <style>
+        button {
+            height: 50px;
+            width: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="image/1.jpg" alt="">
+    <button>Click here</button>
+    <script>
+        $("button").click(function () {
+                $("img").attr("src","image/3.jpg");
+        });
+    </script>
+</body>
+
+</html>

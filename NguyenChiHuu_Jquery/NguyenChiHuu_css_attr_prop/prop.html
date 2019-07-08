@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <style>
+        button {
+            height: 50px;
+            width: 50px;
+        }
+    </style>
+</head>
+
+<body>
+        <input type="checkbox" id="check" name="test" value="1" checked/> Check <br/>
+        <input type="button" id="prop" value="Prop"/>
+        <input type="button" id="attr" value="Attr"/>
+    <script>
+        $("#prop").click(function () {
+                alert($("#check").prop("checked"));
+        });
+        $("#attr").click(function () {
+                alert($("#check").attr("checked"));
+        });
+    </script>
+</body>
+
+</html>
